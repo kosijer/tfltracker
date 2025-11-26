@@ -1,7 +1,7 @@
 # 🗓 London Transit Tracker - Development Roadmap
 
 **Last Updated**: November 26, 2025  
-**Current Phase**: Planning → V1 Development
+**Current Phase**: V1 Development - Week 2 (70% Complete!)
 
 This document tracks all tasks chronologically and serves as commit checkpoints.
 
@@ -25,189 +25,189 @@ This document tracks all tasks chronologically and serves as commit checkpoints.
 
 ### Week 1: Core Foundation
 
-#### Task 1.1: Project Setup
+#### Task 1.1: Project Setup ✅ COMPLETE
 **Goal**: Bootstrap Next.js project with TypeScript and Tailwind CSS
 
-- [ ] Create Next.js project with TypeScript
-- [ ] Configure Tailwind CSS
-- [ ] Setup project structure (app router)
-- [ ] Create `.gitignore` for Next.js
-- [ ] Configure `tsconfig.json`
-- [ ] Test dev server runs
+- [x] Create Next.js project with TypeScript
+- [x] Configure Tailwind CSS
+- [x] Setup project structure (app router)
+- [x] Create `.gitignore` for Next.js
+- [x] Configure `tsconfig.json`
+- [x] Test dev server runs
 
-**Checkpoint**: `chore: Initialize Next.js project with TypeScript and Tailwind`
+**Checkpoint**: `chore: Initialize Next.js project with TypeScript and Tailwind` ✅
 
 ---
 
-#### Task 1.2: Environment Configuration
+#### Task 1.2: Environment Configuration ✅ COMPLETE
 **Goal**: Setup environment variables and API security
 
-- [ ] Create `.env.local` file
-- [ ] Add TfL API credentials (from API_KEYS.md guide)
-- [ ] Add `.env.local` to `.gitignore`
-- [ ] Create `.env.example` template
-- [ ] Document environment setup in project
+- [x] Create `.env.local` file
+- [x] Add TfL API credentials (from API_KEYS.md guide)
+- [x] Add `.env.local` to `.gitignore`
+- [x] Create `.env.example` template
+- [x] Document environment setup in project
 
-**Checkpoint**: `chore: Configure environment variables for TfL API`
+**Checkpoint**: `chore: Configure environment variables for TfL API` ✅
 
 ---
 
-#### Task 1.3: TypeScript Types & Interfaces
+#### Task 1.3: TypeScript Types & Interfaces ✅ COMPLETE
 **Goal**: Define data models for stations and arrivals
 
-- [ ] Create `types/station.ts` interface
-- [ ] Create `types/arrival.ts` interface
-- [ ] Create `types/tfl-api.ts` for API responses
-- [ ] Document type definitions
+- [x] Create `types/station.ts` interface
+- [x] Create `types/arrival.ts` interface
+- [x] Create `types/tfl-api.ts` for API responses
+- [x] Document type definitions
 
-**Files to create**:
+**Files created**:
 ```
 /types
-  ├── station.ts
-  ├── arrival.ts
-  └── tfl-api.ts
+  ├── station.ts ✅
+  ├── arrival.ts ✅
+  └── tfl-api.ts ✅
 ```
 
-**Checkpoint**: `feat: Add TypeScript interfaces for Station and Arrival models`
+**Checkpoint**: `feat: Add TypeScript interfaces for Station and Arrival models` ✅
 
 ---
 
-#### Task 1.4: TfL API Proxy Routes
+#### Task 1.4: TfL API Proxy Routes ✅ COMPLETE
 **Goal**: Create secure Next.js API routes to proxy TfL API
 
-- [ ] Create `/app/api/stations/search/route.ts`
+- [x] Create `/app/api/stations/search/route.ts`
   - Search stations by query
   - Filter by modes (tube, bus, overground, elizabeth-line)
-- [ ] Create `/app/api/stations/[id]/arrivals/route.ts`
+- [x] Create `/app/api/stations/[id]/arrivals/route.ts`
   - Get live arrivals for specific station
   - Sort by time
-- [ ] Test API routes with Postman/curl
-- [ ] Add error handling
+- [x] Test API routes with Postman/curl
+- [x] Add error handling
 
-**Files to create**:
+**Files created**:
 ```
 /app/api
   ├── stations
   │   ├── search
-  │   │   └── route.ts
+  │   │   └── route.ts ✅
   │   └── [id]
   │       └── arrivals
-  │           └── route.ts
+  │           └── route.ts ✅
 ```
 
-**Checkpoint**: `feat: Add TfL API proxy routes for search and arrivals`
+**Checkpoint**: `feat: Add TfL API proxy routes for search and arrivals` ✅
 
 ---
 
-#### Task 1.5: Basic Layout & Styling
+#### Task 1.5: Basic Layout & Styling ✅ COMPLETE
 **Goal**: Create app layout with Tailwind styles
 
-- [ ] Create root layout (`app/layout.tsx`)
-- [ ] Add custom fonts (if needed)
-- [ ] Setup Tailwind config with custom colors
-- [ ] Create global styles
-- [ ] Add responsive meta tags
+- [x] Create root layout (`app/layout.tsx`)
+- [x] Add custom fonts (if needed)
+- [x] Setup Tailwind config with custom colors
+- [x] Create global styles
+- [x] Add responsive meta tags
 
-**Checkpoint**: `feat: Setup app layout and Tailwind configuration`
+**Checkpoint**: `feat: Setup app layout and Tailwind configuration` ✅
 
 ---
 
-#### Task 1.6: Home Page Structure
+#### Task 1.6: Home Page Structure ✅ COMPLETE
 **Goal**: Build main page with hardcoded station
 
-- [ ] Create `app/page.tsx`
-- [ ] Add app title/header
-- [ ] Create hardcoded Romford station card
-- [ ] Add placeholder for departures
-- [ ] Style with Tailwind (mobile-first)
-- [ ] Test responsive design
+- [x] Create `app/page.tsx`
+- [x] Add app title/header
+- [x] Create hardcoded Romford station card
+- [x] Add placeholder for departures
+- [x] Style with Tailwind (mobile-first)
+- [x] Test responsive design
 
-**Checkpoint**: `feat: Create home page with basic layout`
+**Checkpoint**: `feat: Create home page with basic layout` ✅
 
 ---
 
-#### Task 1.7: Fetch & Display Live Arrivals
+#### Task 1.7: Fetch & Display Live Arrivals ✅ COMPLETE
 **Goal**: Connect to API and show real departure times
 
-- [ ] Create utility function to fetch arrivals
-- [ ] Format arrival times (e.g., "3 mins")
-- [ ] Display next 3 departures per station
-- [ ] Add loading state
-- [ ] Add error handling (API down, no data)
-- [ ] Show line names and destinations
+- [x] Create utility function to fetch arrivals
+- [x] Format arrival times (e.g., "3 mins")
+- [x] Display next 3 departures per station
+- [x] Add loading state
+- [x] Add error handling (API down, no data)
+- [x] Show line names and destinations
 
-**Checkpoint**: `feat: Display live arrivals from TfL API`
+**Checkpoint**: `feat: Display live arrivals from TfL API` ✅
 
 ---
 
 ### Week 2: User Features & Polish
 
-#### Task 2.1: LocalStorage Management
+#### Task 2.1: LocalStorage Management ✅ COMPLETE
 **Goal**: Persist favorite stations across sessions
 
-- [ ] Create `utils/storage.ts` helper
-- [ ] Implement `saveStations()` function
-- [ ] Implement `loadStations()` function
-- [ ] Load stations on app mount
-- [ ] Handle localStorage errors (quota exceeded, etc.)
+- [x] Create `utils/storage.ts` helper
+- [x] Implement `saveStations()` function
+- [x] Implement `loadStations()` function
+- [x] Load stations on app mount
+- [x] Handle localStorage errors (quota exceeded, etc.)
 
-**Checkpoint**: `feat: Add localStorage persistence for favorite stations`
+**Checkpoint**: `feat: Add localStorage persistence for favorite stations` ✅
 
 ---
 
-#### Task 2.2: Station List Component
+#### Task 2.2: Station List Component ✅ COMPLETE
 **Goal**: Replace hardcoded station with dynamic list
 
-- [ ] Create `components/StationCard.tsx`
-- [ ] Map over favorite stations
-- [ ] Fetch arrivals for each station
-- [ ] Handle empty state (no stations saved)
-- [ ] Add key prop for React list
+- [x] Create `components/StationCard.tsx`
+- [x] Map over favorite stations
+- [x] Fetch arrivals for each station
+- [x] Handle empty state (no stations saved)
+- [x] Add key prop for React list
 
-**Checkpoint**: `feat: Create dynamic station list component`
+**Checkpoint**: `feat: Create dynamic station list component` ✅
 
 ---
 
-#### Task 2.3: Remove Station Feature
+#### Task 2.3: Remove Station Feature ✅ COMPLETE
 **Goal**: Allow users to delete stations
 
-- [ ] Add remove button (X) to each station card
-- [ ] Implement remove station handler
-- [ ] Update localStorage
-- [ ] Add confirmation (optional for V1)
-- [ ] Update UI immediately
+- [x] Add remove button (X) to each station card
+- [x] Implement remove station handler
+- [x] Update localStorage
+- [x] Add confirmation (optional for V1)
+- [x] Update UI immediately
 
-**Checkpoint**: `feat: Add remove station functionality`
+**Checkpoint**: `feat: Add remove station functionality` ✅
 
 ---
 
-#### Task 2.4: Refresh Button
+#### Task 2.4: Refresh Button ✅ COMPLETE
 **Goal**: Manual refresh for latest departure times
 
-- [ ] Add refresh button in header
-- [ ] Implement refresh handler (re-fetch all arrivals)
-- [ ] Show "Refreshing..." state
-- [ ] Show "Last updated: HH:MM" timestamp
-- [ ] Add icon (🔄)
+- [x] Add refresh button in header
+- [x] Implement refresh handler (re-fetch all arrivals)
+- [x] Show "Refreshing..." state
+- [x] Show "Last updated: HH:MM" timestamp
+- [x] Add icon (🔄)
 
-**Checkpoint**: `feat: Add manual refresh for departure times`
+**Checkpoint**: `feat: Add manual refresh for departure times` ✅
 
 ---
 
-#### Task 2.5: Add Station Modal
+#### Task 2.5: Add Station Modal ✅ COMPLETE
 **Goal**: Search and add new stations
 
-- [ ] Create `components/AddStationModal.tsx`
-- [ ] Add modal open/close state
-- [ ] Create search input with debouncing
-- [ ] Call search API endpoint
-- [ ] Display search results as list
-- [ ] Add station on click
-- [ ] Save to localStorage
-- [ ] Close modal after adding
-- [ ] Handle duplicate stations
+- [x] Create Add Station Modal (integrated in page.tsx)
+- [x] Add modal open/close state
+- [x] Create search input with debouncing
+- [x] Call search API endpoint
+- [x] Display search results as list
+- [x] Add station on click
+- [x] Save to localStorage
+- [x] Close modal after adding
+- [x] Handle duplicate stations
 
-**Checkpoint**: `feat: Add station search and add functionality`
+**Checkpoint**: `feat: Add station search and add functionality` ✅
 
 ---
 
