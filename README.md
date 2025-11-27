@@ -55,6 +55,24 @@ First, let's build something you'll actually use daily. 🚂
 
 ---
 
+## 🚀 Quick Deployment
+
+This app is ready to deploy! See **[DEPLOYMENT.md](DEPLOYMENT.md)** for full guide.
+
+**Recommended: Vercel (FREE)**
+1. Push code to GitHub ✅ (already done)
+2. Sign up at [vercel.com](https://vercel.com)
+3. Import your GitHub repo
+4. Set Root Directory to `london-transit-web`
+5. Add environment variable: `TFL_APP_KEY`
+6. Deploy! 🎉
+
+Your app will be live at `https://your-app.vercel.app`
+
+**⚠️ Don't use GitHub Pages** - it doesn't support API routes.
+
+---
+
 ## ✨ Features
 
 ### 🎯 Version 1 (MVP) - Essential Features Only
