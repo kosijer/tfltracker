@@ -73,12 +73,12 @@ First, let's build something you'll actually use daily. 🚂
 - 📊 **Departures count**: Choose to show 2, 3, or 5 upcoming arrivals
 
 ### 🚀 Version 2 - Enhanced Features
+- ⚙️ User settings/configuration panel (custom refresh intervals, departure counts per station)
 - 🗺️ Map preview when adding stations
 - 📄 Detailed station view (separate screen)
 - 🌙 Dark mode
 - 🎨 Better UI/animations
 - 📱 PWA support (offline mode)
-- 🔍 Filter by line/direction
 
 ### 📱 Version 3 - Mobile Application
 - 📱 React Native iOS & Android apps
