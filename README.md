@@ -74,6 +74,7 @@ First, let's build something you'll actually use daily. 🚂
 
 ### 🚀 Version 2 - Enhanced Features
 - ⚙️ User settings/configuration panel (custom refresh intervals, departure counts per station)
+- ⚠️ Line status alerts (delays, closures, disruptions) via TfL Line Status API
 - 🗺️ Map preview when adding stations
 - 📄 Detailed station view (separate screen)
 - 🌙 Dark mode
